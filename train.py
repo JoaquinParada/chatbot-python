@@ -13,14 +13,16 @@ lemmatizer = WordNetLemmatizer()
 nltk.download('omw-1.4')
 nltk.download("punkt")
 nltk.download("wordnet")
+import os
+from dotenv import load_dotenv
 
-
+intents_path = os.getenv('INTENTS_PATH')
 # init file
 words = []
 classes = []
 documents = []
 ignore_words = ["?", "!"]
-data_file = open("F:\\Data Science Course - IIITB\\NLP\\Chatbot\\AI Chatbot\\An-AI-Chatbot-in-Python-and-Flask-main\\intents.json").read()
+data_file = open(intents_path).read()
 intents = json.loads(data_file)
 
 # words

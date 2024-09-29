@@ -4,17 +4,18 @@ import numpy as np
 import pickle
 import json
 from flask import Flask, render_template, request
-from flask_ngrok import run_with_ngrok
+# from flask_ngrok import run_with_ngrok
 import nltk
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
-
+import os
+from dotenv import load_dotenv
 
 # chat initialization
 model = load_model("chatbot_model.h5")
 # intents = json.loads(open("intents.json").read())
-data_file = open("F:\\Data Science Course - IIITB\\NLP\\Chatbot\\AI Chatbot\\An-AI-Chatbot-in-Python-and-Flask-main\\intents.json").read()
+data_file = open(os.getenv('INTENTS_PATH')).read()
 words = pickle.load(open("words.pkl", "rb"))
 classes = pickle.load(open("classes.pkl", "rb"))
 
@@ -52,7 +53,7 @@ def chatbot_response():
     msg = request.form["msg"]
 
     # Load and process the intents JSON file
-    data_file = open("F:\\Data Science Course - IIITB\\NLP\\Chatbot\\AI Chatbot\\An-AI-Chatbot-in-Python-and-Flask-main\\intents.json").read()
+    data_file = open(os.getenv('INTENTS_PATH')).read()
     intents = json.loads(data_file)
 
     # Rest of your existing code
