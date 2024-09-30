@@ -24,7 +24,7 @@
                 class="img-gala-bot"
               />
               <p class="botText">
-                <span>Hola! soy GalaBot. ¿En qué puedo ayudarte?</span>
+                <span>Soy Gala</span>
               </p>
             </div>
           </div>
@@ -51,7 +51,7 @@
       $(document).ready(function () {
         $("form").on("submit", function (event) {
           var rawText = $("#text").val();
-          var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+          var userHtml = '<div class="col-md-11 ml-auto mr-auto chatbot-res-container chatbot-user-container"><p class="userText"><span>' + rawText + "</span></p></div>";
           $("#text").val("");
           $("#chatbox").append(userHtml);
           document.getElementById("userInput").scrollIntoView({

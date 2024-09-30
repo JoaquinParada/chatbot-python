@@ -175,12 +175,44 @@ textarea {
 }
 
 .userText {
+  position: relative;
   color: var(--text-chat);
   font-family: monospace;
   font-size: 17px;
   text-align: right !important;
   line-height: 30px;
   margin: 5px;
+  margin-right: 15px;
+  max-width: 50%;
+  align-self: flex-end;
+  background-color: var(--blueBuble);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.userText:before {
+content: ' ';
+position: absolute;
+width: 0;
+height: 0;
+  left: auto;
+right: -40px;
+  top: -8px;
+bottom: auto;
+border: 32px solid;
+border-color: transparent;
+}
+.userText:after{
+content: ' ';
+position: absolute;
+width: 0;
+height: 0;
+  left: auto;
+right: -20px;
+  top: 0px;
+bottom: auto;
+border: 20px solid;
+border-color: var(--blueBuble) transparent transparent transparent;
 }
 
 .userText span {
@@ -190,19 +222,46 @@ textarea {
 }
 
 .botText {
+  position: relative;
   color: var(--text-chat);
   font-family: monospace;
+  background-color: var(--orangeBuble);
   font-size: 17px;
   text-align: left;
+  max-width: 50%;
   line-height: 30px;
   margin: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.botText:before {
+content: ' ';
+position: absolute;
+width: 0;
+height: 0;
+  left: -40px;
+right: auto;
+   top: -8px;
+bottom: auto;
+border: 32px solid;
+border-color: transparent;
+}
+.botText:after{
+content: ' ';
+position: absolute;
+width: 0;
+height: 0;
+left: -20px;
+right: auto;
+top: 0px;
+bottom: auto;
+border: 22px solid;
+border-color: var(--orangeBuble) transparent transparent transparent;
 }
 
 .botText span {
-  background-color: var(--orangeBuble);
   color: var(--text-chat);
-  padding: 10px;
-  border-radius: 5px;
 }
 
 #tidbit {
@@ -250,8 +309,11 @@ textarea {
 .chatbot-res-container {
   display: flex;
   gap: 10px;
-  align-items: center;
-  margin: 12px 0;
+  width: 100%;
+}
+
+.chatbot-user-container{
+  justify-content: right;
 }
 
 .btn-send-con {
