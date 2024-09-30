@@ -55,17 +55,23 @@
       "tag": "nombre",
       "patterns": ["¿Cómo te llamas?", "¿Quién eres?", "¿Cuál es tu nombre?"],
       "responses": [
-        "Soy tu asistente virtual del banco. ¿En qué puedo ayudarte?",
-        "Soy el chatbot del banco, aquí para asistirte."
+        "Soy tu asistente virtual del banco GalaBot. ¿En qué puedo ayudarte?",
+        "Soy el chatbot GalaBot, aquí para asistirte."
       ],
       "context": [""]
     },
     {
       "tag": "miperfil",
-      "patterns": ["mi nombre es ", "soy ", "me llamo "],
+      "patterns": ["mi nombre es ", "soy "],
       "responses": [
         "¡Encantado de conocerte {n}! ¿En qué puedo asistirte, {n}?"
       ],
+      "context": [""]
+    },
+    {
+      "tag": "miperfilgenerico",
+      "patterns": ["me llamo ", "me llaman "],
+      "responses": ["¡Encantado de conocerte! ¿En qué puedo asistirte?"],
       "context": [""]
     },
     {
@@ -77,8 +83,7 @@
         "¿Cuánto dinero tengo?"
       ],
       "responses": [
-        "Puedes verificar el saldo de tu cuenta accediendo a tu perfil en nuestra aplicación móvil o en la web.",
-        "Para conocer tu saldo actual, ingresa a tu cuenta a través de nuestra app o página web."
+        "Para acceder al estado de tu cuenta, inicia sesión en nuestra aplicación móvil o en la página web. Una vez dentro, dirígete a la sección 'Mis Cuentas' o 'Saldo'. Aquí podrás ver el saldo actual de todas tus cuentas asociadas, así como el historial de transacciones recientes. También podrás descargar un extracto detallado en formato PDF. La pantalla te mostrará el saldo disponible, el saldo total, y las transacciones más recientes organizadas por fecha."
       ],
       "context": [""]
     },
@@ -91,7 +96,20 @@
         "¿Puedo abrir una cuenta?"
       ],
       "responses": [
-        "Para abrir una cuenta, visita nuestra página web o la sucursal más cercana. También puedes iniciar el proceso en nuestra aplicación móvil."
+        "Para abrir una cuenta, accede a nuestra página web o aplicación móvil. Dirígete a la sección 'Cuentas' y selecciona 'Abrir nueva cuenta'. Completa el formulario con tus datos personales, como nombre completo, dirección, número de identificación oficial (DNI o pasaporte), correo electrónico, y número de teléfono. También deberás proporcionar información financiera básica y elegir el tipo de cuenta que deseas (ahorros, corriente, etc.). Una vez enviada la solicitud, te notificaremos sobre el estado de la apertura de tu cuenta."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "cancelarcuenta",
+      "patterns": [
+        "Quiero cancelar mi cuenta",
+        "¿Cómo cancelo mi cuenta?",
+        "Cerrar mi cuenta",
+        "¿Puedo dar de baja mi cuenta?"
+      ],
+      "responses": [
+        "Para cancelar tu cuenta, accede a tu perfil en nuestra aplicación móvil o página web. Ve a la sección 'Configuración' y selecciona la opción 'Cerrar Cuenta'. Se te pedirá que confirmes la solicitud y proporciones una razón para la cancelación. Después de verificar tus datos, el sistema te mostrará un resumen del proceso, y recibirás una confirmación por correo electrónico. Ten en cuenta que debes liquidar cualquier saldo pendiente antes de cerrar la cuenta."
       ],
       "context": [""]
     },
@@ -103,7 +121,7 @@
         "Solicitar tarjeta de crédito"
       ],
       "responses": [
-        "Puedes solicitar una tarjeta de crédito a través de nuestra página web o aplicación móvil. Revisa los requisitos y beneficios disponibles."
+        "Para solicitar una tarjeta de crédito, inicia sesión en tu cuenta desde nuestra aplicación móvil o sitio web. Accede al menú principal y selecciona la opción 'Tarjetas'. Ahí podrás ver las diferentes opciones de tarjetas de crédito que ofrecemos, como tarjetas estándar, tarjetas premium o con beneficios especiales. Selecciona el tipo de tarjeta que deseas, revisa los requisitos y beneficios asociados, completa el formulario de solicitud con tu información personal, y envía la solicitud. Recibirás una respuesta sobre la aprobación en pocos días."
       ],
       "context": [""]
     },
@@ -116,7 +134,7 @@
         "¿Qué necesito para un préstamo?"
       ],
       "responses": [
-        "Para solicitar un préstamo, ingresa a tu cuenta en nuestra app o visita una sucursal. Podrás ver los requisitos y las tasas de interés disponibles."
+        "Para solicitar un préstamo, inicia sesión en tu cuenta a través de nuestra aplicación móvil o sitio web. Luego, dirígete a la sección 'Préstamos' desde el menú principal. Ahí podrás elegir el tipo de préstamo que necesitas, completar el formulario de solicitud con tus datos personales, y enviar la solicitud para su evaluación. También podrás ver los requisitos y tasas de interés antes de confirmar la solicitud."
       ],
       "context": [""]
     },
@@ -126,10 +144,11 @@
         "¿Dónde está la sucursal más cercana?",
         "Ubicación de sucursales",
         "¿Dónde puedo encontrar una sucursal?",
-        "Sucursales cercanas"
+        "Sucursales cercanas",
+        "¿Cómo encuentro una sucursal?"
       ],
       "responses": [
-        "Puedes encontrar la sucursal más cercana utilizando el localizador en nuestra página web o aplicación móvil."
+        "Puedes encontrar la sucursal más cercana en nuestra página web seleccionando 'Sucursales' en el menú principal, ingresando tu ubicación o permitiendo la geolocalización, o en nuestra aplicación móvil seleccionando 'Sucursales', donde verás un mapa con los detalles de las sucursales cercanas, incluyendo horarios y teléfonos."
       ],
       "context": [""]
     },
@@ -155,7 +174,7 @@
         "¿Puedo cambiar mi clave?"
       ],
       "responses": [
-        "Puedes cambiar tu contraseña accediendo a tu cuenta en la aplicación móvil o en la web. Busca la opción 'Seguridad' o 'Configuración'."
+        "Puedes cambiar tu contraseña accediendo a tu cuenta en nuestra aplicación móvil o sitio web, luego selecciona 'Configuración' o 'Seguridad', busca la opción 'Cambiar contraseña', sigue las instrucciones y recibirás un correo de confirmación para completar el proceso."
       ],
       "context": [""]
     },
