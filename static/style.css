@@ -188,6 +188,9 @@ textarea {
   background-color: var(--blueBuble);
   padding: 5px 10px;
   border-radius: 5px;
+  -webkit-box-shadow: 10px 7px 9px -6px rgba(158,158,158,0.74);
+-moz-box-shadow: 10px 7px 9px -6px rgba(158,158,158,0.74);
+box-shadow: 10px 7px 9px -6px rgba(158,158,158,0.74);
 }
 
 .userText:before {
@@ -233,6 +236,10 @@ border-color: var(--blueBuble) transparent transparent transparent;
   margin: 5px;
   padding: 5px 10px;
   border-radius: 5px;
+  -webkit-box-shadow: 10px 7px 9px -6px rgba(158,158,158,0.74);
+  -moz-box-shadow: 10px 7px 9px -6px rgba(158,158,158,0.74);
+  box-shadow: 10px 7px 9px -6px rgba(158,158,158,0.74);
+  
 }
 
 .botText:before {
@@ -310,6 +317,7 @@ border-color: var(--orangeBuble) transparent transparent transparent;
   display: flex;
   gap: 10px;
   width: 100%;
+
 }
 
 .chatbot-user-container{
