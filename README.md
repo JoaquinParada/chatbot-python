@@ -39,7 +39,7 @@ python -m venv .venv
 source ./.venv/bin/activate  # sh, bash, or zsh
 
 #windows
-.\venv\Scripts\activate
+.\.venv\Scripts\activate
 ```
 
 - **Install TensorFlow:** This step is about installing TensorFlow, the machine learning framework that the chatbot will use for training and prediction.
